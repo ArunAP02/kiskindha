@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KISKINDHA - Investment Proposal</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Define brand colors based on the PDF theme (off-white, black, and gold/beige) */
+            --color-primary: #000000; /* Black */
+            --color-secondary: #D4AF37; /* Gold/Beige Accent */
+            --color-background: #F8F7F2; /* Off-White/Pale Beige */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-background);
+            color: var(--color-primary);
+        }
+        .text-accent {
+            color: var(--color-secondary);
+        }
+        .bg-primary {
+            background-color: var(--color-primary);
+        }
+        /* Custom KISKINDHA Text Style from PDF - Vertical Text */
+        .kiskindha-logo {
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            font-size: 1.5rem; /* 24px */
+            letter-spacing: 0.5rem; /* Wide spacing */
+            font-weight: 500;
+            line-height: 1.5;
+        }
+        /* Custom card animation for staggered reveal */
+        .proposal-card {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            transition-delay: var(--delay);
+        }
+        /* Gradient for the header border */
+        .header-border {
+            height: 4px;
+            background: linear-gradient(90deg, var(--color-secondary) 0%, rgba(212, 175, 55, 0.2) 70%, rgba(212, 175, 55, 0) 100%);
+        }
+        /* Simple button styling */
+        .btn-primary {
+            background-color: var(--color-secondary);
+            color: var(--color-primary);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+        }
+        .btn-primary:hover {
+            background-color: #C5A031;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+        }
+        /* Utility class for bolding currency for impact */
+        .currency-value {
+            font-weight: 700;
+            font-size: 1.125rem; /* lg */
+            color: var(--color-primary);
+        }
+
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <span class="text-3xl font-extrabold text-accent">K</span>
+                <span class="text-xl font-semibold">KISKINDHA</span>
+            </div>
+            <button id="downloadPdfBtn" class="btn-primary px-4 py-2 rounded-lg font-medium text-sm">
+                Download PDF (Source)
+            </button>
+        </div>
+        <div class="header-border"></div>
+    </header>
+
+    <!-- Hero Section (Title and Positioning) -->
+    <main class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+
+        <section id="hero" class="text-center py-16">
+            <h1 class="text-6xl sm:text-7xl font-light tracking-tight mb-4">
+                <span class="text-accent">ELEVATING</span> THE FUTURE
+            </h1>
+            <h2 class="text-2xl sm:text-3xl font-medium text-gray-600">
+                Dolce Vita Affittacamere, Rome - <span class="text-accent">Short-Term Rental Business Proposal</span>
+            </h2>
+            <p class="mt-8 max-w-3xl mx-auto text-lg text-gray-700">
+                This proposal details a robust short-term rental model, showcasing strong financial projections, necessary capital investment, and prime market positioning in Rome.
+            </p>
+        </section>
+
+        <!-- The Property & Positioning -->
+        <section id="property" class="grid md:grid-cols-2 gap-10 py-12 border-t border-gray-300">
+            <!-- Property Details Card -->
+            <div class="proposal-card bg-white p-6 sm:p-8 rounded-xl shadow-lg" style="--delay: 0.1s;">
+                <h3 class="text-3xl font-bold mb-6 text-accent">The Property: Dolce Vita</h3>
+                <h4 class="text-xl font-semibold mb-3">Comfort & Facilities</h4>
+                <ul class="space-y-2 text-gray-700 list-disc pl-5">
+                    <li>**Comfortable Accommodations:** Complimentary WiFi, air conditioning, private en-suite bathrooms, tea & coffee facilities.</li>
+                    <li>**Convenient Facilities:** Private check-in/out, lift access, concierge service, shared communal kitchen, and on-site minimarket.</li>
+                    <li>**Accessibility:** Rooms are equipped with a work desk and a bidet in the bathrooms.</li>
+                </ul>
+                <h4 class="text-xl font-semibold mt-6 mb-3">Prime Location (Rome)</h4>
+                <ul class="space-y-2 text-gray-700 list-disc pl-5">
+                    <li>Situated 8 km from Rome Ciampino Airport.</li>
+                    <li>Close proximity to major public transport: Anagnina Metro Station (3 km), Ponte Lungo Metro Station (5 km), and Porta Maggiore (7 km).</li>
+                    <li>Location and public transport access are highly valued by guests.</li>
+                </ul>
+            </div>
+            <!-- Property Image Mockup -->
+            <div class="proposal-card overflow-hidden rounded-xl shadow-xl h-96" style="--delay: 0.2s;">
+                <img src="https://placehold.co/600x600/E8E8E8/333?text=Luxury+Accommodation+Mockup"
+                     onerror="this.onerror=null; this.src='https://placehold.co/600x600/E8E8E8/333?text=Luxury+Accommodation+Mockup';"
+                     alt="Mockup image of the guest house interior."
+                     class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+            </div>
+        </section>
+
+        <section id="investment-financials" class="py-12 border-t border-gray-300">
+            <h3 class="text-4xl font-bold text-center mb-12 text-accent">Financial Projections & Viability</h3>
+
+            <!-- Key Metrics Grid -->
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <!-- Investment Card -->
+                <div class="proposal-card bg-white p-6 rounded-xl shadow-lg border-b-4 border-accent" style="--delay: 0.3s;">
+                    <p class="text-lg font-medium text-gray-500">Total Capital Required</p>
+                    <p class="text-4xl font-extrabold mt-1 text-primary">€138,000</p>
+                    <p class="mt-2 text-sm text-gray-600">Property Acquisition, Closing Costs & Working Capital.</p>
+                </div>
+                <!-- Revenue Card -->
+                <div class="proposal-card bg-white p-6 rounded-xl shadow-lg border-b-4 border-accent" style="--delay: 0.4s;">
+                    <p class="text-lg font-medium text-gray-500">Projected Annual Revenue</p>
+                    <p class="text-4xl font-extrabold mt-1 text-primary">€122,640</p>
+                    <p class="mt-2 text-sm text-gray-600">Based on a target 70% occupancy rate.</p>
+                </div>
+                <!-- Profit Card -->
+                <div class="proposal-card bg-white p-6 rounded-xl shadow-lg border-b-4 border-accent" style="--delay: 0.5s;">
+                    <p class="text-lg font-medium text-gray-500">Estimated Annual Profit</p>
+                    <p class="text-4xl font-extrabold mt-1 text-primary">€40,780</p>
+                    <p class="mt-2 text-sm text-gray-600">Strong return on investment with a payback period of ~3 years.</p>
+                </div>
+            </div>
+
+            <!-- Detailed Cost Breakdown -->
+            <div class="proposal-card bg-white p-8 rounded-xl shadow-2xl" style="--delay: 0.6s;">
+                <h4 class="text-2xl font-semibold mb-4 border-b pb-2 text-primary">Investment & Operating Cost Breakdown</h4>
+
+                <div class="space-y-6">
+                    <!-- Investment Table -->
+                    <h5 class="text-xl font-medium text-accent">Initial Investment Summary</h5>
+                    <div class="grid md:grid-cols-3 gap-4 border-b pb-4">
+                        <p class="font-medium">Property Value (12-Year Lease)</p>
+                        <p class="md:col-span-2 currency-value">€120,000</p>
+                        <p class="font-medium">Closing Costs & Fees</p>
+                        <p class="md:col-span-2 currency-value">€14,000</p>
+                        <p class="font-medium">Working Capital Reserve</p>
+                        <p class="md:col-span-2 currency-value">€4,000</p>
+                    </div>
+
+                    <!-- Operating Costs -->
+                    <h5 class="text-xl font-medium text-accent pt-4">Estimated Monthly Operating Costs</h5>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <p class="text-lg font-semibold mb-2">Fixed Costs: <span class="currency-value">€2,960 / Month</span></p>
+                            <ul class="space-y-1 text-sm text-gray-700">
+                                <li>Rent: €2,000</li>
+                                <li>Cleaning: €700</li>
+                                <li>Laundry: €200</li>
+                                <li>WiFi: €60</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="text-lg font-semibold mb-2">Variable Costs:</p>
+                            <p class="currency-value">~€1,000 / Month</p>
+                            <p class="text-sm text-gray-700 mt-1">Estimated for utility bills (Water, Electricity, and Gas).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action / Closing Section -->
+        <section id="cta" class="py-16 text-center border-t border-gray-300 mt-12">
+            <h3 class="text-3xl font-bold mb-4">Secure the Future of Wellness with KISKINDHA</h3>
+            <p class="text-xl max-w-4xl mx-auto text-gray-600 mb-8">
+                With a clear path to profitability and a strong market position, this opportunity represents a secure and high-yield investment.
+            </p>
+            <a href="#hero" class="btn-primary px-8 py-3 text-lg rounded-full inline-block">
+                Review Key Metrics
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white p-4 text-center">
+        <p class="text-sm">&copy; 2025 KISKINDHA. Business Proposal - Rome Investment.</p>
+    </footer>
+
+    <!-- JavaScript for Animations and Functionality -->
+    <script>
+        // Smoothly reveal cards when they scroll into view
+        function setupAnimations() {
+            const cards = document.querySelectorAll('.proposal-card');
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target); // Stop observing once visible
+                    }
+                });
+            }, {
+                threshold: 0.1, // Start animation when 10% of the card is visible
+                rootMargin: '0px 0px -50px 0px' // Adjust to trigger slightly sooner
+            });
+
+            cards.forEach(card => {
+                observer.observe(card);
+            });
+        }
+
+        // Setup download button for the PDF
+        function setupDownload() {
+            const downloadBtn = document.getElementById('downloadPdfBtn');
+            // The file name is BUSINESS presentation.pdf and should be accessible via the 'uploaded:' prefix
+            const pdfSource = 'uploaded:BUSINESS presentation.pdf';
+
+            downloadBtn.addEventListener('click', () => {
+                const link = document.createElement('a');
+                link.href = pdfSource;
+                link.download = 'KISKINDHA_Business_Proposal.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
+        }
+
+
+        // Initialize all functions on load
+        window.onload = () => {
+            setupAnimations();
+            setupDownload();
+        };
+    </script>
+</body>
+</html>
